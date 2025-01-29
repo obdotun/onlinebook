@@ -1,0 +1,18 @@
+version: '3'
+services:
+  user-service:
+    build: ./user_service
+    ports:
+      - "3001:3001"
+  book-service:
+    build: ./book_service
+    ports:
+      - "3002:3002"
+  order-service:
+    build: ./order_service
+    ports:
+      - "3003:3003"
+  api-gateway:
+    build: ./api_gateway
+    ports:
+      - "3000:3000"
